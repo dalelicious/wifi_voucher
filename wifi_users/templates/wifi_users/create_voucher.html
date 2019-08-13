@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Create Voucher</title>
+	</head>
+	<body>
+		<center>
+			<fieldset style="background-color:233d44">
+				<h1 style="color:white" style="font-family:dejavu serif" ><center><b>Create Voucher</b></center></h1>
+			</fieldset>
+			<br><br>
+			<form method="post" action="{% url 'wifi_users:create-voucher' %}">
+				{% csrf_token %}
+				Code: <input placeholder="Code" type="text" name="code"></br><br>
+				Quantity: <input placeholder="Quantity" type="text" name="quantity"></br><br>
+				Max Device: <input placeholder="Max Device" type="text" name="max_device"></br><br>
+				Voucher Format: <input placeholder="Voucher Format" type="text" name="voucher_format"></br><br>
+				Length: <input placeholder="Length" type="text" name="length"></br><br>
+				Duration: <input placeholder="Duration" type="text" name="duration"></br><br>
+				Price: <input placeholder="Price" type="text" name="price"></br><br>
+				Purge After: <input placeholder="Purge After" type="text" name="purge_after"></br><br>
+				<input type="submit" name="create"></br>
+			</form>
+		</center>
+	</body>
+</html>
